@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:id="@+id/layoutQuiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile.QuizProfileActivity">
+
+<!--    VEZI CHECKBOX DRAWABLE-->
+    <ProgressBar
+        android:id="@+id/pbPic"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        style="?android:attr/progressBarStyle"
+        android:layout_marginTop="200dp"
+        android:indeterminateTint="@color/lightPink"
+        android:elevation="10dp"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/intro"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:background="@drawable/gradients">
+
+        <TextView
+            android:id="@+id/tvIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/intro"
+            android:textSize="25dp"
+            android:fontFamily="@font/bubblegum_sans"/>
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/nameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_below="@+id/intro"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="@string/nume"
+        android:layout_below="@+id/intro"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:layout_marginHorizontal="7dp"/>
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@+id/tvName"
+        android:fontFamily="@font/caveat_w"
+        android:background="@drawable/bg_lightbink"
+        android:layout_marginLeft="15dp"
+        android:hint="..."
+        android:textAlignment="center"/>
+</LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/years"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/nameLayout"
+        >
+
+        <TextView
+            android:id="@+id/tvBirthYear"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="@string/annastere"
+            android:layout_below="@+id/tvName"
+            android:gravity="center"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:layout_marginLeft="30dp"
+            android:textSize="17dp"/>
+        <EditText
+            android:id="@+id/etBirthYear"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/tvBirthYear"
+            android:layout_below="@+id/etName"
+            android:fontFamily="@font/caveat_w"
+            android:background="@drawable/bg_lightbink"
+            android:layout_marginLeft="15dp"
+            android:hint="..."
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/tvStartYear"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:text="@string/aninceput"
+            android:layout_toRightOf="@+id/etBirthYear"
+            android:layout_below="@+id/etName"
+            android:gravity="center"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="17dp"
+            android:layout_marginLeft="60dp"/>
+        <EditText
+            android:id="@+id/etStartYear"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/tvBirthYear"
+            android:layout_below="@+id/etName"
+            android:fontFamily="@font/caveat_w"
+            android:background="@drawable/bg_lightbink"
+            android:layout_marginLeft="15dp"
+            android:hint="..."
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvHours"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textSize="17dp"
+        android:text="@string/hours"
+        android:layout_below="@+id/years"
+        android:layout_marginLeft="30dp"/>
+    <Spinner
+        android:id="@+id/spinnerHours"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/years"
+        android:layout_toRightOf="@+id/tvHours"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/tvApparatus"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textSize="17dp"
+        android:text="@string/apparatus"
+        android:layout_below="@+id/spinnerHours"
+        android:layout_marginLeft="30dp"/>
+
+    <LinearLayout
+        android:id="@+id/cbGroup"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvApparatus">
+        <CheckBox
+            android:id="@+id/cb1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caveat_w"
+            android:textSize="12dp"
+
+            android:drawableStart="@drawable/rope"
+            android:buttonTint="@color/lightPink"
+            />
+
+
+<!--        android:button="@drawable/select_rb_cb"-->
+<!--        BAGA POZE OBIECTE-->
+<!--        android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"-->
+        <CheckBox
+            android:id="@+id/cb2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caveat_w"
+            android:textSize="12dp"
+
+            android:buttonTint="@color/lightPink"
+            android:drawableStart="@drawable/hoop"
+            />
+        <CheckBox
+            android:id="@+id/cb3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caveat_w"
+            android:textSize="12dp"
+
+            android:buttonTint="@color/lightPink"
+            android:drawableStart="@drawable/ball"/>
+        <CheckBox
+            android:id="@+id/cb4"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caveat_w"
+            android:textSize="12dp"
+
+            android:buttonTint="@color/lightPink"
+            android:drawableStart="@drawable/clubs"/>
+        <CheckBox
+            android:id="@+id/cb5"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/caveat_w"
+            android:textSize="12dp"
+
+            android:buttonTint="@color/lightPink"
+            android:drawableStart="@drawable/ribbon"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvCompete"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textSize="17dp"
+        android:text="@string/compete"
+        android:layout_below="@+id/cbGroup"
+        android:layout_marginLeft="30dp"/>
+    <RadioGroup
+        android:id="@+id/rgCompete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvCompete">
+        <!--        android:button="@drawable/select_rb_cb"-->
+        <RadioButton
+            android:layout_width="120dp"
+            android:id="@+id/rb1"
+            android:text="Recreative"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/caveat_w"
+            android:buttonTint="@color/lightPink"
+            android:textSize="17dp"/>
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="120dp"
+            android:text="National"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/caveat_w"
+            android:buttonTint="@color/lightPink"
+            android:textSize="17dp"/>
+        <RadioButton
+            android:id="@+id/rb3"
+            android:layout_width="120dp"
+            android:text="International"
+            android:layout_height="70dp"
+
+            android:fontFamily="@font/caveat_w"
+            android:buttonTint="@color/lightPink"
+            android:textSize="17dp"/>
+    </RadioGroup>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/rgCompete"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        app:cardCornerRadius="40dp"-->
+<!--        android:layout_marginRight="15dp"-->
+<!--        android:backgroundTint="@color/mediumPink"-->
+<!--        >-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/rgCompete"
+        android:background="@drawable/gradients"
+        android:gravity="center">
+
+<!--        <Button-->
+<!--            android:id="@+id/btnSubmit"-->
+<!--            android:layout_below="@+id/rgCompete"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:backgroundTint="@color/mediumPink"-->
+<!--            android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"-->
+<!--            android:drawableTint="@color/darkgray"-->
+<!--            android:textColor="@color/darkgray"-->
+<!--            android:fontFamily="@font/fauna_one"-->
+<!--            android:textStyle="bold"-->
+<!--            android:text="@string/submit"/>-->
+<!--    </androidx.cardview.widget.CardView>-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="30dp">
+
+            <!--            <androidx.appcompat.widget.AppCompatButton-->
+            <TextView
+                android:id="@+id/btnSubmit"
+                android:background="@drawable/bg_rounded"
+                android:backgroundTint="@color/lightPink"
+                android:fontFamily="@font/bubblegum_sans"
+                android:text="@string/submit"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                android:drawableTint="@color/darkgray"
+                android:textColor="@color/darkgray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:padding="20dp"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "800310852487",
+    "project_id": "rggoal",
+    "storage_bucket": "rggoal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800310852487:android:53be6bdd8425be81537122",
+        "android_client_info": {
+          "package_name": "irina.dam.rggoal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "800310852487-6rq96g7p8otcn3m42e347f7hnej6tjmd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsrxm4bekXlnKxsxiCHlLhdYBymzZGvhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "800310852487-6rq96g7p8otcn3m42e347f7hnej6tjmd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

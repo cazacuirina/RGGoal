@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="450dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup"
+    android:layout_centerInParent="true">
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/fauna_one"
+        android:backgroundTint="@color/darkPink"
+        android:paddingHorizontal="7dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-5dp"/>
+
+    <TextView
+        android:id="@+id/tvCompetitionForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        android:layout_below="@id/btnClose"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:text="@string/competition"
+        android:fontFamily="@font/crafty_girls"
+        android:textColor="@color/lightPink"
+        android:shadowColor="#808080"
+        android:shadowDx="4"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:textStyle="bold"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutCompName"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:hint="@string/compName"
+        app:startIconDrawable="@drawable/ic_baseline_flag_24"
+        android:layout_below="@+id/tvCompetitionForm"
+        android:layout_marginHorizontal="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCompName"
+            android:layout_width="200dp"
+            android:fontFamily="@font/bubblegum_sans"
+            android:layout_height="50dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutCompApp"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:hint="@string/compApp"
+        app:startIconDrawable="@drawable/ic_baseline_format_list_numbered_24"
+        android:layout_below="@+id/layoutCompName"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCompApp"
+            android:layout_width="200dp"
+            android:fontFamily="@font/bubblegum_sans"
+            android:layout_height="50dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/compDate"
+        android:layout_below="@+id/layoutCompApp"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="@font/bubblegum_sans"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+
+    <DatePicker
+        android:id="@+id/dpCompDate"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tvdate"
+        android:layout_centerInParent="true"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmitComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_below="@+id/dpCompDate"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_lightbink"
+        android:textColor="@color/darkgray"
+        android:fontFamily="@font/bubblegum_sans"
+        android:textSize="16dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"/>
+</RelativeLayout>

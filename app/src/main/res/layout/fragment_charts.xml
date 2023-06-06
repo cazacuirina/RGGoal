@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Charts.ChartsFragment">
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/grafic2"
+        android:fontFamily="@font/bubblegum_sans"
+        android:textColor="@color/darkPink"
+        android:layout_centerHorizontal="true"
+        android:shadowColor="#808080"
+        android:shadowDx="4"
+        android:shadowDy="1"
+        android:shadowRadius="3" />
+    />
+
+   <LinearLayout
+       android:id="@+id/btnCharts"
+       android:layout_below="@+id/tvProgress"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:weightSum="2">
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/btnBar"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="wrap_content"
+           android:background="@drawable/bg_rounded"
+           android:text="Phases Bar Chart"
+           android:drawableEnd="@drawable/ic_baseline_area_chart_24"
+           android:paddingHorizontal="5dp"
+           android:textColor="@color/white"
+           android:layout_marginHorizontal="7dp"
+           android:drawableTint="@color/white"
+           android:fontFamily="@font/bubblegum_sans"
+           android:layout_centerHorizontal="true"
+           android:shadowColor="@color/darkPink"
+           android:shadowDx="4"
+           android:shadowDy="1"
+           android:shadowRadius="3"/>
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/btnLine"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="wrap_content"
+           android:background="@drawable/bg_rounded"
+           android:text="Stages Line Chart"
+           android:drawableEnd="@drawable/ic_baseline_stacked_line_chart_24"
+           android:paddingHorizontal="5dp"
+           android:textColor="@color/white"
+           android:layout_marginHorizontal="7dp"
+           android:drawableTint="@color/white"
+           android:fontFamily="@font/bubblegum_sans"
+           android:layout_centerHorizontal="true"
+           android:shadowColor="@color/darkPink"
+           android:shadowDx="3"
+           android:shadowDy="3"
+           android:shadowRadius="3"/>
+
+   </LinearLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/btnCharts"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/btnCharts"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tooltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="5dp"
+        android:fontFamily="@font/fauna_one"/>
+
+</RelativeLayout>
+</ScrollView>

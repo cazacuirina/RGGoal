@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:id="@+id/learn"
+        android:title="Learning Programs">
+        <menu>
+            <item android:id="@+id/bd" android:title="Body Difficulties" android:icon="@drawable/gym_bd"/>
+            <item android:id="@+id/ad" android:title="Apparatus Difficulties" android:icon="@drawable/gym_ad"/>
+        </menu>
+    </item>
+
+    <item android:id="@+id/develop"
+        android:title="Developing Programs" >
+        <menu>
+            <item android:id="@+id/strength" android:title="Strength" android:icon="@drawable/gym_strength"/>
+            <item android:id="@+id/flexibility" android:title="Flexibility" android:icon="@drawable/gym_flexibility"/>
+        </menu>
+    </item>
+</menu>

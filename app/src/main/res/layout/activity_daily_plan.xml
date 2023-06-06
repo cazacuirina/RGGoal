@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainingPlan.DailyPlanActivity">
+
+    <RelativeLayout
+        android:id="@+id/phase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradients">
+    <TextView
+        android:id="@+id/tvPlanZilnic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/planzilnic2"
+        android:textColor="@color/mediumPink"
+        android:shadowColor="#808080"
+        android:shadowDx="4"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:fontFamily="@font/bubblegum_sans"
+        android:textSize="25dp"/>
+
+<!--        textview cu faza-->
+<!--        se inroseste daca intarzii sau warn daca e prea rpd-->
+
+        <TextView
+            android:id="@+id/tvTotalDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPlanZilnic"
+            android:layout_marginVertical="7dp"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tvTimerStage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTotalDuration"
+            android:layout_toStartOf="@+id/tvTimer"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textStyle="italic"
+            android:layout_marginVertical="7dp"
+            android:textSize="17dp"
+            android:layout_marginRight="30dp"/>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTotalDuration"
+            android:text="00:00:00"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="7dp"
+            android:layout_marginRight="20dp"/>
+
+        <ImageButton
+            android:id="@+id/btnNextStage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTimer"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:background="@color/mediumPink"
+            android:src="@drawable/ic_baseline_next_plan_24"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTimer"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:layout_toStartOf="@+id/btnNextStage"
+            android:background="@color/mediumPink"
+            android:src="@drawable/ic_baseline_refresh_24"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/btnStartPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTimer"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/btnReset"
+            android:background="@color/mediumPink"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            app:tint="@color/white" />
+
+
+    <TextView
+        android:id="@+id/tvPhase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnReset"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="25dp"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textSize="17dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/intensity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/intensity"
+        android:layout_below="@+id/tvPhase"
+        android:textSize="17dp"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+    <TextView
+        android:id="@+id/tvIntensity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/intensity"
+        android:layout_below="@+id/tvPhase"
+        android:textSize="17dp"
+        android:fontFamily="@font/caveat_w"/>
+
+    <TextView
+        android:id="@+id/volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/volume"
+        android:layout_below="@+id/tvPhase"
+        android:layout_toRightOf="@+id/tvIntensity"
+        android:textSize="17dp"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+    <TextView
+        android:id="@+id/tvVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/tvPhase"
+        android:layout_toRightOf="@+id/volume"
+        android:textSize="17dp"
+        android:fontFamily="@font/caveat_w"/>
+
+    <TextView
+        android:id="@+id/technical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:text="@string/techPrep"
+        android:layout_below="@+id/tvPhase"
+        android:layout_toRightOf="@+id/tvVolume"
+        android:textSize="17dp"
+        android:fontFamily="@font/caveatbrush_regular"/>
+    <TextView
+        android:id="@+id/tvTechnical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/tvPhase"
+        android:layout_toRightOf="@+id/technical"
+        android:fontFamily="@font/caveat_w"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/phase"/>
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/btnDone"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/rvPlan"-->
+<!--        android:layout_alignParentRight="true"S-->
+<!--        android:background="@drawable/bg_lightbink"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:fontFamily="@font/fauna_one"-->
+<!--        android:textStyle="bold"-->
+<!--        android:drawableEnd="@drawable/ic_baseline_check_24"-->
+<!--        android:paddingHorizontal="5dp"-->
+<!--        android:text="@string/planDone"/>-->
+
+</RelativeLayout>
+    </ScrollView>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/lightPink">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightPink">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePic"
+            android:layout_width="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_baseline_person_24"
+            android:layout_height="100dp"
+            />
+
+
+<!--        <ImageView-->
+<!--        android:id="@+id/profilePic"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:src="@drawable/ic_baseline_person_24"-->
+<!--        android:layout_height="100dp"/>-->
+
+    <ImageButton
+        android:id="@+id/btnPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_photo_camera_24"
+        android:layout_toRightOf="@+id/profilePic"
+        android:layout_alignBottom="@id/profilePic"
+        android:background="@color/lightPink"/>
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nume"
+        android:textStyle="italic"
+        android:textSize="25dp"
+        android:paddingVertical="10dp"
+        android:layout_marginLeft="75dp"
+        android:layout_below="@+id/profilePic"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="25dp"
+            android:paddingVertical="10dp"
+            android:layout_below="@+id/profilePic"
+            android:layout_toRightOf="@id/tvname"
+            android:fontFamily="@font/caveat_w"
+            android:layout_marginLeft="20dp"/>
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/head"
+        android:background="@drawable/wave_drawer">
+
+    <TextView
+        android:id="@+id/tvborn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/annastere"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:paddingVertical="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+        <TextView
+            android:id="@+id/born"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="17dp"
+            android:paddingVertical="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tvborn"
+            android:fontFamily="@font/caveat_w"/>
+
+    <TextView
+        android:id="@+id/tvexperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/experienta"
+        android:textStyle="italic"
+        android:textSize="15dp"
+        android:paddingVertical="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@+id/born"
+        android:fontFamily="@font/caveatbrush_regular"/>
+
+        <TextView
+            android:id="@+id/experience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="17dp"
+            android:paddingVertical="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/tvexperience"
+            android:fontFamily="@font/caveat_w"/>
+
+    <TextView
+        android:id="@+id/tvlevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nivel"
+        android:textStyle="italic"
+        android:textSize="17dp"
+        android:paddingVertical="10dp"
+        android:layout_marginLeft="75dp"
+        android:layout_below="@+id/experience"
+        android:fontFamily="@font/caveatbrush_regular"/>
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:textSize="19dp"
+            android:paddingVertical="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@+id/experience"
+            android:layout_toRightOf="@id/tvlevel"
+            android:fontFamily="@font/caveat_w"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

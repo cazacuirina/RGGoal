@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".StartApp.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/layoutPlan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradients">
+
+        <TextView
+            android:id="@+id/tvSuggestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btnSearch"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:layout_marginTop="55dp"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:textSize="17dp"/>
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_baseline_search_24"
+            android:background="@drawable/tv_rounded"
+            android:padding="10dp"
+            android:layout_marginRight="20dp"
+            app:tint="@color/lightGray" />
+
+    <TextView
+        android:id="@+id/tvHi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="@font/bubblegum_sans"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/tvplan"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_below="@+id/tvHi"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:layout_marginLeft="50dp"
+        android:textSize="23dp"
+        android:textColor="@color/mediumPink"
+        android:shadowColor="#808080"
+        android:shadowDx="4"
+        android:shadowDy="1"
+        android:shadowRadius="3"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="@string/aici"
+        android:visibility="gone"
+        android:layout_below="@+id/tvHi"
+        android:layout_toRightOf="@+id/tvplan"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/tv_rounded"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/tvCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvplan"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/caveatbrush_regular"
+        android:textSize="20dp"
+        android:layout_marginTop="120dp"/>
+
+    </RelativeLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvSuggestion"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/layoutPlan"-->
+<!--        android:text="ALOHA"/>-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/currentDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp"
+        android:layout_below="@+id/layoutPlan"
+        android:visibility="gone"
+        android:backgroundTint="@color/lightPink"
+        app:cardElevation="5dp">
+<!--        android:visibility="gone"-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvCurrent"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/imgProgramEnrolled"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tvProgramName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imgProgramEnrolled"
+            android:fontFamily="@font/bubblegum_sans"/>
+
+        <TextView
+            android:id="@+id/tvProgramCateg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tvProgramName"
+            android:fontFamily="@font/caveatbrush_regular"/>
+
+        <TextView
+            android:id="@+id/tvProgramDay"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imgProgramEnrolled"
+            android:layout_below="@+id/tvProgramName"
+            android:textStyle="bold"
+            android:fontFamily="@font/caveat_w"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Open"
+            android:layout_below="@+id/tvProgramCateg"
+            android:layout_marginRight="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/tv_rounded"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvNext"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/currentDay"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:fontFamily="@font/caveatbrush_regular"-->
+<!--        android:textSize="20dp"-->
+<!--        android:layout_marginTop="150dp"/>-->
+
+
+
+</RelativeLayout>

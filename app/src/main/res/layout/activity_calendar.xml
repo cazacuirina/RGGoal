@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartApp.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textColor="@color/mediumPink"
+        android:shadowColor="#808080"
+        android:shadowDx="4"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:text="@string/calendar"
+        android:fontFamily="@font/bubblegum_sans"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp">
+
+        <!--        <Button-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:text="@string/back"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:background="@null"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:onClick="previousMonthAction"-->
+        <!--            android:textSize="20sp"/>-->
+
+        <ImageButton
+            android:id="@+id/backBtnCalendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:background="@drawable/bg_rounded"
+            app:tint="@color/white"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/monthYearTV"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/gray"
+            android:fontFamily="@font/bubblegum_sans"
+            />
+
+        <!--        <Button-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:text="@string/forward"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:background="@null"-->
+        <!--            android:textStyle="bold"-->
+        <!--            android:onClick="nextMonthAction"-->
+        <!--            android:textSize="20sp"/>-->
+
+        <ImageButton
+            android:id="@+id/fwdBtnCalendar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/white"
+            android:background="@drawable/bg_rounded" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sun"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mon"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/tue"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/wed"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/thu"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fri"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/sat"
+            android:textColor="@color/gray"
+            android:textAlignment="center"
+            android:fontFamily="@font/caveatbrush_regular"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradients"/>
+
+</LinearLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    tools:context=".CalendarActivity">-->
+
+
+    <!--    <com.github.sundeepk.compactcalendarview.CompactCalendarView-->
+    <!--        android:id="@+id/calendar"-->
+    <!--        android:layout_width="fill_parent"-->
+    <!--        android:paddingRight="10dp"-->
+    <!--        android:paddingLeft="10dp"-->
+    <!--        android:layout_marginTop="100dp"-->
+    <!--        android:layout_height="400dp"-->
+    <!--        app:compactCalendarTargetHeight="400dp"-->
+    <!--        app:compactCalendarTextSize="12sp"-->
+    <!--        app:compactCalendarBackgroundColor="#ffe95451"-->
+    <!--        app:compactCalendarTextColor="#fff"-->
+    <!--        app:compactCalendarCurrentSelectedDayBackgroundColor="#E57373"-->
+    <!--        app:compactCalendarCurrentDayBackgroundColor="#B71C1C"-->
+    <!--        app:compactCalendarMultiEventIndicatorColor="#fff"-->
+    <!--        />-->
+    <!--</RelativeLayout>-->

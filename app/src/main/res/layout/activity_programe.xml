@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Programs.ProgramsActivity">
+
+    <LinearLayout
+        android:id="@+id/suggestedProg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/gradients"
+        android:paddingTop="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutSearch"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:hint="Search program"
+            app:startIconDrawable="@drawable/ic_baseline_search_24"
+            android:layout_gravity="end"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="10dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusTopStart="20dp"
+            app:boxCornerRadiusBottomStart="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSearch"
+                android:layout_width="200dp"
+                android:fontFamily="@font/bubblegum_sans"
+                android:textStyle="italic"
+                android:layout_height="50dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvPrograms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:text="@string/programs"
+        android:textColor="@color/mediumPink"
+        android:shadowColor="#808080"
+        android:shadowDx="4"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:fontFamily="@font/bubblegum_sans"/>
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22dp"
+            android:textStyle="italic"
+            android:textColor="@color/gray"
+            android:shadowColor="@color/mediumPink"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/caveatbrush_regular"/>
+    </LinearLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/suggestedProg"
+        android:layout_marginTop="30dp"
+        android:id="@+id/rvPrograms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+<!--    com.google.android.material.button.MaterialButton-->
+<!--    !!!!!!PUNE VISIBLE NUMAI DACA SE TERMINA LISTA DE LA LVL CRT-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+        android:text="@string/next"
+        android:layout_below="@id/rvPrograms"
+        android:background="@drawable/tv_rounded"
+        android:textColor="#FFFFFF"
+        android:drawableTint="#FFFFFF"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>
+</ScrollView>

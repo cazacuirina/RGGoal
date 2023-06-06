@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartApp.MainActivity">
+
+    <ProgressBar
+        android:id="@+id/pbLoad"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        style="?android:attr/progressBarStyle"
+        android:layout_below="@+id/progr"
+        android:layout_marginTop="200dp"
+        android:indeterminateTint="@color/lightPink"
+        />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/progr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightPink"
+        app:titleTextColor="@color/gray"
+        app:iconTint="@color/gray"
+        >
+        
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/programMenu"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:title="@string/programe"
+
+            app:navigationIcon="@drawable/ic_baseline_menu_24"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:menu="@menu/nav_options"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemTextColor="@color/bottom_nav_colors"
+        app:itemIconTint="@color/bottom_nav_colors"
+        app:itemRippleColor="@color/mediumPink"
+        android:id="@+id/navBar">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navBar"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="-20dp" />
+
+</RelativeLayout>
+    
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_drawer"
+        app:menu="@menu/nav_drawer_opt"/>
+    
+</androidx.drawerlayout.widget.DrawerLayout>

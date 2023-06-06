@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardProgram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_rounded"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgProgram"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginVertical="15dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/tvProgName"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/imgProgram"
+            android:text="Name"
+            android:fontFamily="@font/bubblegum_sans"/>
+
+        <TextView
+            android:id="@+id/tvProgDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@+id/imgProgram"
+            android:layout_below="@+id/tvProgName"
+            android:text="Days"
+            android:textStyle="bold"
+            android:fontFamily="@font/caveat_w"/>
+
+        <TextView
+            android:id="@+id/tvEnroll"
+            android:layout_width="wrap_content"
+            android:padding="7dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="17dp"
+            android:layout_below="@+id/tvProgName"
+            android:layout_toRightOf="@id/tvProgDays"
+            android:layout_marginLeft="150dp"
+            android:background="@drawable/tv_rounded"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bubblegum_sans"
+            android:text="@string/progAvailable" />
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

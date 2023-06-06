@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutCompetiton">
+
+    <LinearLayout
+        android:id="@+id/layoutNumeComp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="6">
+    <TextView
+        android:id="@+id/tvNumeCompet"
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_height="60dp"
+        android:fontFamily="@font/fauna_one"/>
+
+    <ImageButton
+        android:id="@+id/btnEdit"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_edit_note_24"
+        android:backgroundTint="@color/lightPink"
+        android:layout_marginHorizontal="5dp"
+        android:layout_toRightOf="@+id/tvNumeCompet"/>
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_cancel_24"
+        android:layout_marginHorizontal="5dp"
+        android:layout_toRightOf="@+id/tvNumeCompet"
+        android:backgroundTint="@color/darkPink"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNoAppCompet"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/layoutNumeComp"
+        android:textSize="20dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/caveat_w"/>
+    <TextView
+        android:id="@+id/tvDataCompet"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/layoutNumeComp"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/tvNoAppCompet"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/caveatbrush_regular"/>
+    <TextView
+        android:id="@+id/tvDaysLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutNumeComp"
+        android:layout_toRightOf="@+id/tvDataCompet"
+        android:fontFamily="@font/bubblegum_sans"
+        android:textSize="17dp"
+        android:layout_marginLeft="20dp"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>
